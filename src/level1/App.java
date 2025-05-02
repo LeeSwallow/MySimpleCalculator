@@ -48,6 +48,7 @@ public class App {
             /* exit을 입력 받으면 반복 종료 */
             if (lastAnswer.equals("exit")) {
                 isContinue = false;
+                sc.close();
             }
         }
     }
