@@ -2,7 +2,7 @@ package level1;
 
 import java.util.Scanner;
 
-public class App {
+public class AppLv1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         /* 반복문 사용 해서 연산을 반복 */

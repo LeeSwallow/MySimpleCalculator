@@ -2,7 +2,7 @@ package level2;
 
 import java.util.Scanner;
 
-public class App {
+public class AppLv2 {
 
     private static int parseNaturalNumber(String userInput) throws RuntimeException  {
         try (Scanner scanner = new Scanner(userInput)) {

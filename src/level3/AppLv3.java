@@ -2,7 +2,7 @@ package level3;
 
 import java.util.Scanner;
 
-public class App {
+public class AppLv3 {
     private static boolean isDouble(Number number) {
         return number instanceof Double;
     }
