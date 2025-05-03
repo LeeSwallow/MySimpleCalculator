@@ -8,27 +8,34 @@ public class AppLv1 {
         /* 반복문 사용 해서 연산을 반복 */
         boolean isContinue = true;
         while (isContinue) {
+            String userInput;
+            Scanner inputScanner;
             try {
-                System.out.print("첫 번째 숫자를 입력하세요:");
+                System.out.print("첫 번째 숫자를 입력하세요: ");
 
                 if (!sc.hasNextInt()) {
                     sc.nextLine();
                     throw new RuntimeException("제대로 된 형식의 숫자를 입력해 주세요!");
                 }
-                int num1 = sc.nextInt();
+                userInput = sc.nextLine();
+                inputScanner = new Scanner(userInput);
+                int num1 = inputScanner.nextInt();
+
                 if (num1 <= 0) throw new RuntimeException("양의 정수를 입력해 주세요!");
 
-                System.out.print("두 번째 숫자를 입력하세요:");
-
+                System.out.print("두 번째 숫자를 입력하세요: ");
                 if (!sc.hasNextInt()) {
                     sc.nextLine();
                     throw new RuntimeException("제대로 된 형식의 숫자를 입력해 주세요!");
                 }
-                int num2 = sc.nextInt();
+                userInput = sc.nextLine();
+                inputScanner = new Scanner(userInput);
+                int num2 = inputScanner.nextInt();
                 if (num2 <= 0) throw new RuntimeException("양의 정수를 입력해 주세요!");
 
                 System.out.print("사칙연산 기호를 입력하세요: ");
-                char operator = sc.next().charAt(0);
+                userInput = sc.nextLine();
+                char operator = userInput.charAt(0);
 
                 int result = switch (operator) {
                     case '+' -> Math.addExact(num1, num2);
@@ -44,9 +51,9 @@ public class AppLv1 {
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            String lastAnswer = sc.next().trim().toLowerCase();
+            userInput = sc.nextLine();
             /* exit을 입력 받으면 반복 종료 */
-            if (lastAnswer.equals("exit")) {
+            if (userInput.equals("exit")) {
                 isContinue = false;
                 sc.close();
             }
